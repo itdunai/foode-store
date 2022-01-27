@@ -1,0 +1,51 @@
+.apps{
+    position: relative;
+    background-image: url(../images/apps-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    &__wrap{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        min-height: 600px;
+        &_one, &_two{
+            position: relative;
+            & img{
+                position: absolute;
+                
+            }
+        }
+        &_one {
+            width: 300px;
+            img{
+                top: -100px;
+                right: 0px;
+                z-index: 1;
+                filter: drop-shadow(50px 30px 150px rgba(46, 4, 4, 0.21));
+            }
+        }
+        &_two {
+            width: 285px;
+            img{
+                top: -50px;
+                left: -5%;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .apps{
+        &__wrap{
+            min-height: 400px;
+        }
+        &__wrap_one{
+            width: 200px;
+        }
+        &__wrap_two{
+            width: 185px;
+        }
+    }
+    
+}

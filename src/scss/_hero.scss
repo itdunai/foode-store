@@ -1,0 +1,75 @@
+.hero{
+    background-image: url(../images/hero.jpg);
+    background-size: 100%;
+    min-height: 610px;
+    text-align: center;
+    color: $white;
+    padding: 75px 200px 140px 200px;
+    &__first_text{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+    & h1{
+        font-weight: bold;
+        font-size: 58px;
+        line-height: 80px;
+        margin-bottom: 30px;
+    }
+    &__second_text{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 51px;
+    }
+    &__buttons{
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:1024px){
+    .hero{
+        padding: 75px 0 140px 0;
+        background-size: cover;
+        &__first_text{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        & h1{
+            font-size: 48px;
+            line-height: 60px;
+        }
+        &__second_text{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+@media(max-width:525px){
+    .hero{
+        padding: 75px 20px 140px 20px;
+        background-size: cover;
+        &__first_text{
+            font-size: 16px;
+            line-height: 30px;
+        }
+        & h1{
+            font-size: 30px;
+            line-height: 40px;
+        }
+        &__second_text{
+            font-size: 16px;
+            line-height: 30px;
+        }
+        &__buttons{
+            flex-wrap: wrap;
+            & .buttons{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

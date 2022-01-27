@@ -1,0 +1,96 @@
+.how{
+    padding: 55px 0;
+    & h2{
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 36px;
+        text-align: center;
+        color: $black;
+        margin-bottom: 60px;
+        display: inline-block;
+        width: 100%;
+    }
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 90px 0;
+        &_img{
+            text-align: center;
+            width: 50%;
+            filter: drop-shadow(50px 30px 150px rgba(46, 4, 4, 0.15));
+            & img{
+                max-width: 250px;
+            }
+        }
+        &_text{
+            width: 50%;
+            margin-top: 55px;
+            & .first{
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 36px;
+                color: $red;
+                margin-bottom: 15px;
+            }
+            & .title{
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 57px;
+                margin-bottom: 20px;
+            }
+            & .second{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 38px;
+                letter-spacing: 0.2px;
+                color: #737373;
+            }
+        }
+        
+    }
+    &__block.two{
+        padding-left: 100px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .how{
+        &__block_img{
+            width: 30%;
+        }
+        &__block_text{
+            width: 60%;
+        }
+        &__block.two{
+            padding-left: 30px;
+        }
+    }
+}
+@media screen and (max-width:525px) {
+    .how{
+        &__block_img{
+            width: 100%;
+        }
+        &__block_text{
+            width: 100%;
+            text-align: center;
+            
+            & .title{
+                font-size: 30px;
+                line-height: 35px;
+            }
+            & .second{
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        &__block.two{
+            padding-left: 0;
+            flex-wrap: wrap-reverse;
+        }
+        &__block{
+            margin: 20px 0 60px;
+            flex-wrap: wrap;
+        }
+    }
+}
